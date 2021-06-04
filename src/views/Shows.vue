@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div  class="shows">
     <h4>Top Rated Shows</h4>
     <div class="top-shows">
       <div v-for="show of topShows" :key="show.id" class="image">
@@ -50,7 +50,7 @@ export default {
      });
     },
     getAllShows() {
-      getAllTvShows().then((res) => {
+      return getAllTvShows().then((res) => {
         this.showList = res.data;
         let movieGenres = new Set();
         this.showList.forEach((shows) => {

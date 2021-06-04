@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.67% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/15</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">88.89% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>8/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.67% </span>
+                <span class="strong">93.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/15</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -177,34 +177,34 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">20x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -227,7 +227,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;div&gt;
+  &lt;div  class="shows"&gt;
     &lt;h4&gt;Top Rated Shows&lt;/h4&gt;
     &lt;div class="top-shows"&gt;
       &lt;div v-for="show of topShows" :key="show.id" class="image"&gt;
@@ -261,35 +261,35 @@
 &lt;script&gt;
 import { getAllTvShows } from "@/service/Apiservice";
 export default {
-<span class="fstat-no" title="function not covered" >  data() {</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
+  data() {
+    return {
       showList: [],
       topShows: [],
       genreName: [],
     };
   },
-<span class="fstat-no" title="function not covered" >  created() {</span>
-<span class="cstat-no" title="statement not covered" >    this.getAllShows();</span>
+  created() {
+    this.getAllShows();
   },
   methods: {
-<span class="fstat-no" title="function not covered" >    genreMovies(genre){</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >     return this.showList.filter((show)=&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >       return show.genres.includes(genre)</span>
+    genreMovies(genre){
+     return this.showList.filter((show)=&gt; {
+       return show.genres.includes(genre)
      });
     },
-<span class="fstat-no" title="function not covered" >    getAllShows() {</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      getAllTvShows().then((res) =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >        this.showList = res.data;</span>
-<span class="cstat-no" title="statement not covered" >        let movieGenres = new Set();</span>
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        this.showList.forEach((shows) =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >          if (shows.rating.average &gt; 8.5) {</span>
-<span class="cstat-no" title="statement not covered" >            this.topShows.push(shows);</span>
+    getAllShows() {
+      return getAllTvShows().then((res) =&gt; {
+        this.showList = res.data;
+        let movieGenres = new Set();
+        this.showList.forEach((shows) =&gt; {
+          if (shows.rating.average &gt; 8.5) {
+            this.topShows.push(shows);
           }
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >          shows.genres.forEach((genre)=&gt;{</span></span>
-<span class="cstat-no" title="statement not covered" >            movieGenres.add(genre);</span>
+          shows.genres.forEach((genre)=&gt;{
+            movieGenres.add(genre);
           })
         });
-<span class="cstat-no" title="statement not covered" >        this.genreName=movieGenres;</span>
+        this.genreName=movieGenres;
       });
     },
 <span class="fstat-no" title="function not covered" >    routeinfo(getid) {</span>
@@ -318,7 +318,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jun 03 2021 17:22:54 GMT+0530 (India Standard Time)
+                at Fri Jun 04 2021 00:55:26 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

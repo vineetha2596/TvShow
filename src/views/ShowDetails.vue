@@ -1,7 +1,7 @@
 <template>
   <div class="ShowDetails">
       <div class="row">
-        <div class="fcontainer">
+        <div class="fcontainer" v-if="tvShowDetail">
           <img
             :src="tvShowDetail.image.medium"
             alt="show Image"
@@ -35,8 +35,7 @@ export default {
   data() {
     return {
       searchCast: [],
-      tvShowDetail: {},
-      errormsg: false,
+      tvShowDetail: null,
     };
   },
   created() {
