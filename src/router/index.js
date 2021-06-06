@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Shows from '../views/Shows.vue'
 import Search from '../views/Search.vue'
 import ShowDetails from '../views/ShowDetails.vue'
 import ErrorPage from '../views/ErrorPage.vue'
@@ -13,11 +12,6 @@ export const routes = [
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/shows',
-    name: 'Shows',
-    component: Shows
   },
   {
     path: '/search/:enteredValue',

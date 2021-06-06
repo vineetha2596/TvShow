@@ -3,7 +3,7 @@
     <div class="row">
       <div
         v-for="show of searchShows"
-        :key="show.show.name"
+        :key="show.show.id"
         class="Details col-md-4 col-lg-3 col-sm-6 col-xs-6"
       >
         <img :src="show.show.image.medium" alt="Show Image" @click="routeinfo(show.show.id)"/>

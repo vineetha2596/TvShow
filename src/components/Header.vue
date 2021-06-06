@@ -16,7 +16,7 @@
               <b-input-group-append>
                 <b-button
                   class="search-button"
-                  @click="getsearch">enter</b-button
+                  @click="getsearch">Search</b-button
                 >
               </b-input-group-append>
             </b-input-group>

@@ -18,12 +18,12 @@
         </div>
         <h4>Cast</h4>
         <div
-          v-for="show of searchCast"
-          :key="show.person.name"
+          v-for="(show,index) of searchCast"
+          :key="index"
           class="Details col-md-4 col-lg-3 col-sm-6 col-xs-6"
         >
-          <img :src="show.person.image.medium" alt="Show Image" />
-          <h5>{{ show.person.name }}</h5>
+          <img :src="show.person.image.medium" alt="Show Image" class="img"/>
+          <h6>{{ show.person.name }}</h6>
         </div>
       </div>
     </div>
@@ -66,6 +66,10 @@ export default {
 .fitem {
   padding: 10px;
   text-align: justify;
+}
+.img{
+  height: 100px;
+  width: 40%;
 }
 </style>
 

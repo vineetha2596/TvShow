@@ -1,5 +1,5 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
-import Shows from '@/views/Shows.vue';
+import Home from '@/views/Home.vue';
 
 jest.mock('@/service/Apiservice.js', () => {
     return {
@@ -19,7 +19,7 @@ describe("In Shows component ", () => {
     beforeEach(() => {
         let localVue = createLocalVue()
 
-        wrapper = shallowMount(Shows, {
+        wrapper = shallowMount(Home, {
             localVue,
             data() {
                 return {

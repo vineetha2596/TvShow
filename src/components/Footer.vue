@@ -3,11 +3,6 @@
       © 2021 Copyright:All rights are resvered
   </div>
 </template>
-<script>
-export default {
-  
-};
-</script>
 <style scoped>
 .appFooter{
   position: fixed;
