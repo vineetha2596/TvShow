@@ -29,7 +29,6 @@ describe("In App component ", () => {
     it("should contain  <app-footer />",()=>{
         expect(wrapper.html()).toContain("<app-footer-stub></app-footer-stub>");
     });
-
 }
 )
 

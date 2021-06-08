@@ -1,7 +1,7 @@
 <template>
   <div class="search">
     <div v-if="!searchShows.length">
-      <h4>Data not Found</h4>
+      <h4 class="text-center">Data not Found</h4>
     </div>
     <div class="row" v-if="searchShows && searchShows.length">
       <div
@@ -67,8 +67,14 @@ export default {
 };
 </script>
 <style scoped>
+.search{
+  padding-top: 50px;
+}
 .image {
   height: 295px;
   width: 210px;
+}
+.row{
+  padding-left:10px;
 }
 </style>

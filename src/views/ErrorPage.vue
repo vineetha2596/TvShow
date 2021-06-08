@@ -8,6 +8,7 @@ export default {
 </script>
 <style scoped>
 .error-page {
+  text-align: center;
   padding-top: 100px;
   color: red;
 }

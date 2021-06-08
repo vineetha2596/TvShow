@@ -1,6 +1,7 @@
 <template>
   <div class="app-header">
    <b-navbar toggleable="lg" type="dark" variant="dark">
+     <div class="container-fluid">
    <b-navbar-brand href="#">MazaTv</b-navbar-brand>
    <b-navbar-nav>
         <b-nav-item to=/>Home</b-nav-item>
@@ -26,6 +27,7 @@
           </b-nav-form>
         </b-navbar-nav>
     </b-collapse>
+    </div>
   </b-navbar>
   </div>
 </template>
@@ -49,8 +51,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.app-header {
-  margin: 30px;
-}
-</style>

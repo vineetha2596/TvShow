@@ -31,7 +31,7 @@
     </div>
     </div>
   <div v-else>
-    <h2>Error found .Please contact the adminstrator.</h2>
+    <h2 class="text-center">An Error found .Please contact the service adminstrator.</h2>
   </div>
   </div>
 </template>
@@ -99,9 +99,9 @@ export default {
 .top-shows, .genre {
   display: flex;
   overflow: auto;
-  margin: 10px;
+  margin: 1px;
 }
 .image {
-  padding: 10px;
+  padding: 5px;
 }
 </style>
