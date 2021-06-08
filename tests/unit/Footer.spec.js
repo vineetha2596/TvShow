@@ -12,8 +12,8 @@ describe("In Footer component ", () => {
     afterEach(()=>{
         wrapper.destroy()
     })
-    it("should contain <div class='appFooter'>",()=>{
-        expect(wrapper.html()).toContain('<div class="appFooter">')
+    it("should contain <div class='app-footer'>",()=>{
+        expect(wrapper.html()).toContain('<div class="app-footer">')
     })
 }
 )

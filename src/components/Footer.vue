@@ -1,15 +1,13 @@
 <template>
-  <div class="appFooter">
-      © 2021 Copyright:All rights are resvered
-  </div>
+  <div class="app-footer">© 2021 Copyright:All rights are resvered</div>
 </template>
 <style scoped>
-.appFooter{
+.app-footer {
   position: fixed;
-  bottom:0%;
+  bottom: 0%;
   width: 100vw;
   text-align: center;
-  background-color:darkslategray;
+  background-color: rgb(45, 45, 49);
   color: white;
-  }
+}
 </style>

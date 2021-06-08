@@ -109,7 +109,44 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,9 +179,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,6 +193,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,13 +204,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
   &lt;div class="search"&gt;
-    &lt;div class="row"&gt;
+    &lt;div v-if="!searchShows.length"&gt;
+      &lt;h4&gt;Data not Found&lt;/h4&gt;
+    &lt;/div&gt;
+    &lt;div class="row" v-if="searchShows &amp;&amp; searchShows.length"&gt;
       &lt;div
         v-for="show of searchShows"
         :key="show.show.id"
-        class="Details col-md-4 col-lg-3 col-sm-6 col-xs-6"
+        class="details col-md-4 col-lg-3 col-sm-6 col-xs-6"
       &gt;
-        &lt;img :src="show.show.image.medium" alt="Show Image" @click="routeinfo(show.show.id)"/&gt;
+        &lt;div v-if="show.show.image"&gt;
+          &lt;img
+            :src="show.show.image.medium"
+            alt="Show Image"
+            @click="routeinfo(show.show.id)"
+          /&gt;
+        &lt;/div&gt;
+        &lt;div v-else&gt;
+          &lt;img
+            src="@/assets/userimage.png"
+            alt="show Image"
+            @click="routeinfo(show.show.id)"
+            class="image"
+          /&gt;
+        &lt;/div&gt;
         &lt;h4&gt;{{ show.show.name }}&lt;/h4&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -187,7 +244,7 @@ export default {
   },
   computed: {
     searchData() {
-      return this.$route.params.enteredValue
+      return this.$route.params.enteredValue;
     },
   },
   created() {
@@ -195,26 +252,29 @@ export default {
   },
   methods: {
     getSearchShow() {
-      getSearchShowsService(this.searchData)
-        .then((res) =&gt; {
-          this.searchShows = res.data;
-        })
+      getSearchShowsService(this.searchData).then((res) =&gt; {
+        this.searchShows = res.data;
+      });
     },
-<span class="fstat-no" title="function not covered" >    routeinfo(getid){</span>
-<span class="cstat-no" title="statement not covered" >        this.$router.push({</span>
-            name:"ShowDetails",
-            params:{id:getid}          
-        })
-    }
+<span class="fstat-no" title="function not covered" >    routeinfo(getid) {</span>
+<span class="cstat-no" title="statement not covered" >      this.$router.push({</span>
+        name: "ShowDetails",
+        params: { id: getid },
+      });
+    },
   },
   watch: {
-<span class="fstat-no" title="function not covered" >    searchData(){</span>
+<span class="fstat-no" title="function not covered" >    searchData() {</span>
 <span class="cstat-no" title="statement not covered" >      this.getSearchShow();</span>
-    }
+    },
   },
 };
 &lt;/script&gt;
 &lt;style scoped&gt;
+.image {
+  height: 295px;
+  width: 210px;
+}
 &lt;/style&gt;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -222,7 +282,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jun 07 2021 00:46:17 GMT+0530 (India Standard Time)
+                at Tue Jun 08 2021 12:11:02 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

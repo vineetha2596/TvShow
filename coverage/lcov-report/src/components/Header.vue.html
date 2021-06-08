@@ -29,9 +29,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -100,7 +100,18 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,25 +142,39 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;div class="appHeader"&gt;
-    &lt;b-navbar toggleable="lg" type="dark" variant="dark"&gt;
-    &lt;b-button to='/'&gt;Maza VueTV&lt;/b-button&gt;
-    &lt;b-navbar-toggle target="nav-collapse"&gt;&lt;/b-navbar-toggle&gt;
-    &lt;b-collapse id="nav-collapse" is-nav&gt;
+  &lt;div class="app-header"&gt;
+   &lt;b-navbar toggleable="lg" type="dark" variant="dark"&gt;
+   &lt;b-navbar-brand href="#"&gt;MazaTv&lt;/b-navbar-brand&gt;
+   &lt;b-navbar-nav&gt;
+        &lt;b-nav-item to=/&gt;Home&lt;/b-nav-item&gt;
+   &lt;/b-navbar-nav&gt;
+   &lt;b-navbar-toggle target="nav-collapse"&gt;&lt;/b-navbar-toggle&gt;
+   &lt;b-collapse id="nav-collapse" is-nav&gt;
       &lt;b-navbar-nav class="ms-auto"&gt;
           &lt;b-nav-form right&gt;
             &lt;b-input-group&gt;
@@ -162,7 +187,7 @@
               &lt;b-input-group-append&gt;
                 &lt;b-button
                   class="search-button"
-                  @click="getsearch"&gt;Search&lt;/b-button
+                   @click="getsearch"&gt;Search&lt;/b-button 
                 &gt;
               &lt;/b-input-group-append&gt;
             &lt;/b-input-group&gt;
@@ -176,26 +201,34 @@
 export default {
   data() {
     return {
-      search:'',
+      search: "",
     };
   },
-  methods:{
-    getsearch(){
-<span class="missing-if-branch" title="else path not taken" >E</span>      if (this.search) {
-        this.$router.push({ name: 'Search', params: { enteredValue: this.search } })
+  methods: {
+    getsearch() {
+      if (this.search) {
+        this.$router.push({
+          name: "Search",
+          params: { enteredValue: this.search },
+        });
       }
-      this.search = ''
-    }
-  }
+      this.search = "";
+    },
+  },
 };
-&lt;/script&gt;</pre></td></tr></table></pre>
+&lt;/script&gt;
+&lt;style scoped&gt;
+.app-header {
+  margin: 30px;
+}
+&lt;/style&gt;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jun 07 2021 00:46:17 GMT+0530 (India Standard Time)
+                at Tue Jun 08 2021 12:11:02 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

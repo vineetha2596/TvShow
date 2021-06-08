@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
@@ -131,7 +131,13 @@
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
 <a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,22 +168,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -185,7 +175,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -207,34 +219,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
-  &lt;div class="ShowDetails"&gt;
-      &lt;div class="row"&gt;
-        &lt;div class="fcontainer" v-if="tvShowDetail"&gt;
-          &lt;img
-            :src="tvShowDetail.image.medium"
-            alt="show Image"
-            class="fitem"
-          /&gt;
-          &lt;div class="fitem"&gt;
-            &lt;h2&gt;{{ tvShowDetail.name }}&lt;/h2&gt;
-            &lt;h5&gt;Genre : {{ tvShowDetail.genres.toString() }}&lt;/h5&gt;
-            &lt;h5&gt;Language : {{ tvShowDetail.language }}&lt;/h5&gt;
-            &lt;h5&gt;Rating : {{ tvShowDetail.rating.average }}&lt;/h5&gt;
-            &lt;h5&gt;Summary :&lt;/h5&gt;
-            &lt;h6 v-html="tvShowDetail.summary"&gt;&lt;/h6&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;h4&gt;Cast&lt;/h4&gt;
-        &lt;div
-          v-for="(show,index) of searchCast"
-          :key="index"
-          class="Details col-md-4 col-lg-3 col-sm-6 col-xs-6"
-        &gt;
-          &lt;img :src="show.person.image.medium" alt="Show Image" class="img"/&gt;
-          &lt;h6&gt;{{ show.person.name }}&lt;/h6&gt;
+  &lt;div class="show-details"&gt;
+    &lt;div v-if="!error"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="fcontainer" v-if="tvShowDetail"&gt;
+        &lt;img :src="tvShowDetail.image.medium" alt="show Image" class="fitem" /&gt;
+        &lt;div class="fitem"&gt;
+          &lt;h2&gt;{{ tvShowDetail.name }}&lt;/h2&gt;
+          &lt;h5&gt;Genre : {{ tvShowDetail.genres.toString() }}&lt;/h5&gt;
+          &lt;h5&gt;Language : {{ tvShowDetail.language }}&lt;/h5&gt;
+          &lt;h5&gt;Rating : {{ tvShowDetail.rating.average }}&lt;/h5&gt;
+          &lt;h5&gt;Summary :&lt;/h5&gt;
+          &lt;h6 v-html="tvShowDetail.summary"&gt;&lt;/h6&gt;
         &lt;/div&gt;
       &lt;/div&gt;
+      &lt;h4&gt;Cast&lt;/h4&gt;
+      &lt;div
+        v-for="(show, index) of searchCast"
+        :key="index"
+        class="details col-md-4 col-lg-3 col-sm-6 col-xs-6"
+      &gt;
+        &lt;img :src="show.person.image.medium" alt="Show Image" class="img" /&gt;
+        &lt;h6&gt;{{ show.person.name }}&lt;/h6&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div v-else&gt;
+       &lt;h2&gt;Error found .Please contact the adminstrator.&lt;/h2&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/template&gt;
 &lt;script&gt;
 import { getShowDetails, getShowCast } from "@/service/Apiservice";
@@ -244,6 +257,7 @@ export default {
     return {
       searchCast: [],
       tvShowDetail: null,
+      error:false,
     };
   },
   created() {
@@ -252,16 +266,20 @@ export default {
   },
   methods: {
     getShowDetail() {
-      getShowDetails(this.$route.params.id)
-        .then((res) =&gt; {
-          this.tvShowDetail = res.data;
-        })
+      getShowDetails(this.$route.params.id).then((res) =&gt; {
+        this.tvShowDetail = res.data;
+<span class="fstat-no" title="function not covered" >      })</span>
+      .catch((err)=&gt; {
+<span class="cstat-no" title="statement not covered" >        this.error = err.message;</span>
+      });
     },
     getShowCastDetails() {
-      getShowCast(this.$route.params.id)
-        .then((res) =&gt; {
-          this.searchCast = res.data;
-        })
+      getShowCast(this.$route.params.id).then((res) =&gt; {
+        this.searchCast = res.data;
+<span class="fstat-no" title="function not covered" >      })</span>
+      .catch((err)=&gt; {
+<span class="cstat-no" title="statement not covered" >        this.error = err.message;</span>
+      });
     },
   },
 };
@@ -269,15 +287,15 @@ export default {
 &lt;style scoped&gt;
 .fcontainer {
   display: flex;
-  padding-top: 10px;
 }
 .fitem {
-  padding: 10px;
+  padding: 35px;
+  padding-top: 10px;
   text-align: justify;
 }
-.img{
+.img {
   height: 100px;
-  width: 40%;
+  width: 100px;
 }
 &lt;/style&gt;
 &nbsp;
@@ -288,7 +306,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jun 07 2021 00:46:17 GMT+0530 (India Standard Time)
+                at Tue Jun 08 2021 12:11:02 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\prettify.js"></script>

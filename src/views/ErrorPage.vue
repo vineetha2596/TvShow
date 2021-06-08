@@ -1,5 +1,5 @@
 <template>
-  <h2 class="ErrorPage">Page Not Found</h2>
+  <h2 class="error-page">Page Not Found</h2>
 </template>
 <script>
 export default {
@@ -7,7 +7,7 @@ export default {
 };
 </script>
 <style scoped>
-.ErrorPage {
+.error-page {
   padding-top: 100px;
   color: red;
 }

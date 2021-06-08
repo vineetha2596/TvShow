@@ -1,5 +1,6 @@
 <template>
   <div class="shows">
+    <div v-if="!error">
     <h4>Top Rated Shows</h4>
     <div class="top-shows">
       <div v-for="show of sortedTopShows" :key="show.id" class="image">
@@ -28,6 +29,10 @@
         </div>
       </div>
     </div>
+    </div>
+  <div v-else>
+    <h2>Error found .Please contact the adminstrator.</h2>
+  </div>
   </div>
 </template>
 <script>
@@ -38,6 +43,7 @@ export default {
       showList: [],
       topShows: [],
       genreName: [],
+      error: false,
     };
   },
   created() {
@@ -59,8 +65,9 @@ export default {
      return this.showList.filter((show)=> show.genres.includes(genre));
     },
     getAllShows() {
-      return getAllTvShows().then((res) => {
+        getAllTvShows().then((res) => {
         this.showList = res.data;
+        
         let movieGenres = new Set();
         this.showList.forEach((shows) => {
           if (shows.rating.average > 8.5) {
@@ -71,6 +78,9 @@ export default {
           })
         });
         this.genreName=movieGenres;
+      })
+      .catch((err)=> {
+        this.error = err.message;
       });
     },
     routeinfo(getid) {
@@ -84,7 +94,7 @@ export default {
 </script>
 <style scoped>
 .shows{
-  padding: 58px;
+  padding: 10px;
 }
 .top-shows, .genre {
   display: flex;

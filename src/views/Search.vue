@@ -1,12 +1,29 @@
 <template>
   <div class="search">
-    <div class="row">
+    <div v-if="!searchShows.length">
+      <h4>Data not Found</h4>
+    </div>
+    <div class="row" v-if="searchShows && searchShows.length">
       <div
         v-for="show of searchShows"
         :key="show.show.id"
-        class="Details col-md-4 col-lg-3 col-sm-6 col-xs-6"
+        class="details col-md-4 col-lg-3 col-sm-6 col-xs-6"
       >
-        <img :src="show.show.image.medium" alt="Show Image" @click="routeinfo(show.show.id)"/>
+        <div v-if="show.show.image">
+          <img
+            :src="show.show.image.medium"
+            alt="Show Image"
+            @click="routeinfo(show.show.id)"
+          />
+        </div>
+        <div v-else>
+          <img
+            src="@/assets/userimage.png"
+            alt="show Image"
+            @click="routeinfo(show.show.id)"
+            class="image"
+          />
+        </div>
         <h4>{{ show.show.name }}</h4>
       </div>
     </div>
@@ -23,7 +40,7 @@ export default {
   },
   computed: {
     searchData() {
-      return this.$route.params.enteredValue
+      return this.$route.params.enteredValue;
     },
   },
   created() {
@@ -31,24 +48,27 @@ export default {
   },
   methods: {
     getSearchShow() {
-      getSearchShowsService(this.searchData)
-        .then((res) => {
-          this.searchShows = res.data;
-        })
+      getSearchShowsService(this.searchData).then((res) => {
+        this.searchShows = res.data;
+      });
     },
-    routeinfo(getid){
-        this.$router.push({
-            name:"ShowDetails",
-            params:{id:getid}          
-        })
-    }
+    routeinfo(getid) {
+      this.$router.push({
+        name: "ShowDetails",
+        params: { id: getid },
+      });
+    },
   },
   watch: {
-    searchData(){
+    searchData() {
       this.getSearchShow();
-    }
+    },
   },
 };
 </script>
 <style scoped>
+.image {
+  height: 295px;
+  width: 210px;
+}
 </style>
